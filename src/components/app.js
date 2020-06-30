@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Home from "./home";
+import Calculator from "./calculator";
 import Toggle from "./toggle";
 import HideMe from "./hideme";
 import Numbers from "./numbers";
@@ -13,7 +14,7 @@ export default class App extends Component {
           <Router>
           <div>
             <Home />
-          
+            <Calculator/>
             <Switch>      
               {/* <Route exact path="/" component={Home}>
               </Route> */}
