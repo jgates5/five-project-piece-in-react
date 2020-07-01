@@ -6,33 +6,35 @@ export default class Calculator extends Component {
     super();
 
     this.state = {
-      // punchOn: show,
+   
       intEger: 0,
-      data: ""
+      newNumber: 0
     };
+
+    this.punchedNumber = this.punchedNumber.bind(this);
   }
 
-  // punchedNumber = () => {
-  //   this.setState({intEger: this.state.intEger})
-   
-  //   console.log(this.state.intEger)
-  // }
-  
-punchedNumber(newEntry, array) {
-  this.setState({intEger: newEntry})
-  this.setState({data: array})
-  console.log(this.state.intEger)
-}
+ 
+  punchedNumber(newEntry) {
+    this.setState({intEger: newEntry})
+    console.log(this.state.intEger)
+ 
+  }
 
-onClick
+
+  newSetNumber= () => {
+    this.setState({newNumber: event.target.value})
+   
+  }
+
 
 
   render () {
     return (
 
         
-      <div className='calculator-wrapper'>
-       <input style={{count: this.state.intEger + this.state.data}} placeholder= '0' />
+      <div className='calculator-wrapper'>   
+       <input style={{count: this.state.NewNumber}} placeholder = '0' value={this.state.intEger} onChange={event => this.newSetNumber()}/>
        <button onClick={() => this.punchedNumber("0")}>0</button>
        <button onClick={() => this.punchedNumber("1")}>1</button>
        <button onClick={() => this.punchedNumber("2")}>2</button>
